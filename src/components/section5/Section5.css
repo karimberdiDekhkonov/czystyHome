@@ -66,19 +66,25 @@
 } 
  
 .facebook{ 
+    margin-left: 10px; 
+    cursor: pointer; 
+    text-decoration: none;
     width: 5vw; 
     height: 5vw; 
-    background: #4869ad; 
+    color:white; 
+    text-align: center; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    background: #e23b47; 
     border: none; 
     border-radius: 0.3vw; 
+    background: #4869ad; 
 } 
- 
-.icon_insta{ 
-    width: 150%; 
-    height: 150%; 
-} 
+
 .instagram{ 
     margin-left: 10px; 
+    text-decoration: none;
     cursor: pointer; 
     width: 5vw; 
     height: 5vw; 
@@ -93,19 +99,35 @@
 } 
 .telegram{ 
     margin-left: 10px; 
+    text-decoration: none;
+    cursor: pointer; 
     width: 5vw; 
     height: 5vw; 
-    background: #08c; 
+    color:white; 
+    text-align: center; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    background: #e23b47; 
     border: none; 
     border-radius: 0.3vw; 
+    background: #08c; 
 } 
 .youtube{ 
     margin-left: 10px; 
+    cursor: pointer; 
+    text-decoration: none;
     width: 5vw; 
     height: 5vw; 
-    background: #eb3223; 
+    color:white; 
+    text-align: center; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    background: #e23b47; 
     border: none; 
     border-radius: 0.3vw; 
+    background: #eb3223; 
 } 
  
 .social_network{ 

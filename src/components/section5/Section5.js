@@ -1,5 +1,4 @@
 import React from 'react'
-import FontAwesomeIcon from "@fortawesome/fontawesome-svg-core"
 import "./Section5.css"
 
 export default function Section5() {
@@ -26,12 +25,10 @@ export default function Section5() {
                     <p className='subscribe_unsubscribe'>How to unsubscribe from the newsletter?</p>
                 </div>
                 <div className='social_network'>
-                    <a href="#!" className='facebook'>
-                        
-                    </a>
-                    <a href="https://www.instagram.com/czystyhome/" className='instagram'></a>
-                    <a href='https://t.me/polshadanyevropadanxabarlar' className='telegram'></a>
-                    <a hraf='#!' className='youtube'></a>
+                    <a href="#!" className='facebook'>Facebook</a>
+                    <a href="https://www.instagram.com/czystyhome/" className='instagram'>Instagram</a>
+                    <a href='https://t.me/polshadanyevropadanxabarlar' className='telegram'>Telegram</a>
+                    <a hraf='#!' className='youtube'>Youtube</a>
                 </div>
             </div>
         </>
