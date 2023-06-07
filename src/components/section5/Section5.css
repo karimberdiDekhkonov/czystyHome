@@ -1,0 +1,115 @@
+.hone{ 
+    font-family: 'Futura PT',sans-serif;
+    font-weight: 700; 
+    font-size: 2vw; 
+    margin-bottom: 1.5vw; 
+    line-height: 2.4vw; 
+} 
+ 
+.firstdiv{ 
+    width: 65%; 
+    padding: 50px; 
+    padding-bottom: 300px; 
+} 
+ 
+.pone{ 
+    font-size: 140%; 
+} 
+ 
+.pone span{ 
+    font-weight: 800; 
+} 
+ 
+.pta{ 
+    position: relative; 
+    width: 50%; 
+} 
+ 
+.seconddiv{ 
+    padding: 50px; 
+    display: flex; 
+} 
+ 
+.subscribe{ 
+    font-size: 180%; 
+} 
+ 
+.subscribe_input{ 
+    padding: 30px; 
+    font-size: 180%; 
+    border: none; 
+    width: 50%; 
+    border-top-left-radius: 8px; 
+    border-bottom-left-radius: 8px; 
+    background-color: rgba(0,0,0,.05); 
+} 
+ 
+.subscribe_button{ 
+    /* position: absolute; */ 
+    /* left: 600px; */ 
+    background-color: #1c47a6; 
+    cursor: pointer; 
+    color: white; 
+    font-size: 150%; 
+    padding-top: 34px; 
+    border-top-right-radius: 8px; 
+    border-bottom-right-radius: 8px; 
+    border: none; 
+    padding-bottom: 31px; 
+    padding-left: 100px; 
+    padding-right: 100px; 
+} 
+ 
+.subscribe_unsubscribe{ 
+    padding-left: 30px; 
+    color: rgb(219, 219, 219); 
+} 
+ 
+.facebook{ 
+    width: 5vw; 
+    height: 5vw; 
+    background: #4869ad; 
+    border: none; 
+    border-radius: 0.3vw; 
+} 
+ 
+.icon_insta{ 
+    width: 150%; 
+    height: 150%; 
+} 
+.instagram{ 
+    margin-left: 10px; 
+    cursor: pointer; 
+    width: 5vw; 
+    height: 5vw; 
+    color:white; 
+    text-align: center; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    background: #e23b47; 
+    border: none; 
+    border-radius: 0.3vw; 
+} 
+.telegram{ 
+    margin-left: 10px; 
+    width: 5vw; 
+    height: 5vw; 
+    background: #08c; 
+    border: none; 
+    border-radius: 0.3vw; 
+} 
+.youtube{ 
+    margin-left: 10px; 
+    width: 5vw; 
+    height: 5vw; 
+    background: #eb3223; 
+    border: none; 
+    border-radius: 0.3vw; 
+} 
+ 
+.social_network{ 
+    width: 50%; 
+    display: flex; 
+    justify-content: end; 
+}
