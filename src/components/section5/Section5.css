@@ -1,4 +1,6 @@
-.hone{ 
+@import url("https://fonts.cdnfonts.com/css/futura-pt");
+
+.lng-hone{ 
     font-family: 'Futura PT',sans-serif;
     font-weight: 700; 
     font-size: 2vw; 
@@ -12,8 +14,9 @@
     padding-bottom: 300px; 
 } 
  
-.pone{ 
+.lng-pone{ 
     font-size: 140%; 
+    font-family: 'Futura PT',sans-serif;
 } 
  
 .pone span{ 
@@ -30,7 +33,7 @@
     display: flex; 
 } 
  
-.subscribe{ 
+.lng-subscribe{ 
     font-size: 180%; 
 } 
  
@@ -44,9 +47,7 @@
     background-color: rgba(0,0,0,.05); 
 } 
  
-.subscribe_button{ 
-    /* position: absolute; */ 
-    /* left: 600px; */ 
+.lng-subscribe_button{ 
     background-color: #1c47a6; 
     cursor: pointer; 
     color: white; 
@@ -66,19 +67,24 @@
 } 
  
 .facebook{ 
+    margin-left: 10px; 
+    cursor: pointer; 
+    text-decoration: none;
     width: 5vw; 
     height: 5vw; 
-    background: #4869ad; 
+    color:white; 
+    text-align: center; 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
     border: none; 
     border-radius: 0.3vw; 
+    background: #4869ad; 
 } 
- 
-.icon_insta{ 
-    width: 150%; 
-    height: 150%; 
-} 
+
 .instagram{ 
     margin-left: 10px; 
+    text-decoration: none;
     cursor: pointer; 
     width: 5vw; 
     height: 5vw; 
@@ -93,19 +99,35 @@
 } 
 .telegram{ 
     margin-left: 10px; 
+    text-decoration: none;
+    cursor: pointer; 
     width: 5vw; 
     height: 5vw; 
-    background: #08c; 
+    color:white; 
+    text-align: center; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    background: #e23b47; 
     border: none; 
     border-radius: 0.3vw; 
+    background: #08c; 
 } 
 .youtube{ 
     margin-left: 10px; 
+    cursor: pointer; 
+    text-decoration: none;
     width: 5vw; 
     height: 5vw; 
-    background: #eb3223; 
+    color:white; 
+    text-align: center; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    background: #e23b47; 
     border: none; 
     border-radius: 0.3vw; 
+    background: #eb3223; 
 } 
  
 .social_network{ 

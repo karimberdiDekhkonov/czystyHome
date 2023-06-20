@@ -1,13 +1,116 @@
-body {
+@import url("https://fonts.cdnfonts.com/css/futura-pt");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Futura PT", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.category-img {
+  width: 38px;
+  height: 38px;
+}
+.orders1 {
+  margin: 0 auto !important;
+  text-align: center;
+  padding: 10px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.select-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.selected-option {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: #f0f0f0;
+}
+
+.selected-option img {
+  width: 30px;
+  height: 24px;
+  margin-right: 0.5rem;
+}
+
+.selected-option-name {
+  margin: 0;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.dropdown-item img {
+  width: 30px;
+  height: 24px;
+  margin-right: 0.5rem;
+}
+
+.dropdown-item-name {
+  margin: 0;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+.menu-icon {
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 100px;
+  display: block;
+
+  border: none;
+}
+.menu-icon:hover {
+  background-color: #e9ecef;
+}
+.iconn {
+  width: 30px;
+  height: 30px;
+}
+
+.menu-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+
+  font-size: 25px;
+  background-color: #f8f9fa;
+  width: 800px;
+  padding: 50px 150px;
+}
+.menu-content a {
+  text-decoration: none;
+}
+.menu-content a:hover {
+  box-shadow: 0 1px 0 black;
+
+  transition: all 0.3s;
 }
