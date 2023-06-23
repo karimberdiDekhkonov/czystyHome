@@ -2,6 +2,7 @@ import { Navbar, Regular } from "..";
 import { Box } from "@mui/material";
 import { Route, Routes } from "react-router-dom";
 import Section5 from "../section5/Section5";
+import Footer from "../Footer/Footer";
 
 
 const App = () => {
@@ -10,8 +11,10 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/regular" element={<Regular />} />
+        <Route path="/admin" element={<Regular />} />
       </Routes>
       <Section5 />
+      <Footer/>
     </Box>
   );
 };
