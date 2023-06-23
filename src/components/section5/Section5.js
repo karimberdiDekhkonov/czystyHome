@@ -1,6 +1,7 @@
 import React from 'react'
 import "./Section5.css"
-import FacebookIcon from '@mui/icons-material/Facebook';
+// import FacebookIcon from '@mui/icons-material/Facebook';
+// import YouTubeIcon from '@mui/icons-material/YouTube';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TelegramIcon from '@mui/icons-material/Telegram';
 
@@ -24,16 +25,16 @@ export default function Section5() {
 
             <div className='seconddiv'>
                 <div className='pta'>
-                    <p className='lng-subscribe'></p>
+                    <p className='lng-subscribe'>Subscribe to Newsletter</p>
                     <input className='subscribe_input' type='text' maxLength="255" placeholder='Your e-mail adress'></input>
                     <button className='lng-subscribe_button'>Subscribe</button>
                     <p className='lng-subscribe_unsubscribe'>How to unsubscribe from the newsletter?</p>
                 </div>
                 <div className='social_network'>
-                    <a href="#!" className='facebook'><FacebookIcon style={{width: "3vw", height: "3.5vw"}}/></a>
+                    {/* <a href="#!" className='facebook'><FacebookIcon style={{width: "3vw", height: "3.5vw"}}/></a> */}
                     <a href="https://www.instagram.com/czystyhome/" className='instagram'><InstagramIcon style={{width: "3vw", height: "3.5vw"}}/> </a>
-                    <a href='https://t.me/polshadanyevropadanxabarlar' className='telegram'><TelegramIcon style={{width: "3vw", height: "3.5vw"}}/></a>
-                    {/* <a hraf='#!' className='youtube'>Youtube</a> */}
+                    <a href='http://t.me/Czystyhome_bot' className='telegram'><TelegramIcon style={{width: "3vw", height: "3.5vw"}}/></a>
+                    {/* <a hraf='#!' className='youtube'><YouTubeIcon style={{width: "3vw", height: "3.5vw"}}/></a> */}
                 </div>
             </div>
         </>

@@ -29,11 +29,6 @@ export const category = [
     icon: "https://cleanwhale.pl/assets/frontend/images/icons/office-order.svg",
     name: "Office",
   },
-  {
-    path: "car-cleaning",
-    icon: "https://cleanwhale.pl/assets/frontend/images/icons/car-order.svg",
-    name: "Cars",
-  },
 ];
 export const logo =
   "https://images.squarespace-cdn.com/content/v1/5293a22fe4b0782ba465fe0b/1565372572677-ZWUV5NEKP000OMZTS68B/KOKO+Logo+Lockups+2-02_1200x1200.png?format=1000w";
