@@ -5,6 +5,9 @@ import Section5 from "../section5/Section5";
 import Footer from "../Footer/Footer";
 import Renovation from "../renovation/regular";
 import Window from "../window/regular";
+import Dry from "../dry/regular";
+import Handyman from "../handyman/regular";
+import Office from "../office/regular";
 
 
 const App = () => {
@@ -14,7 +17,10 @@ const App = () => {
       <Routes>
         <Route path="/regular" element={<Regular />} />
         <Route path="/renovation" element={<Renovation />} />
-        <Route path="/window" element={<Window />} />
+        <Route path="/windows" element={<Window />} />
+        <Route path="/dry-cleaning" element={<Dry />} />
+        <Route path="/handyman" element={<Handyman />} />
+        <Route path="/office" element={<Office />} />
       </Routes>
       <Section5 />
       <Footer/>
