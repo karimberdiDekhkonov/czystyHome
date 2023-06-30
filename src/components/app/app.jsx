@@ -8,6 +8,8 @@ import Window from "../window/regular";
 import Dry from "../dry/regular";
 import Handyman from "../handyman/regular";
 import Office from "../office/regular";
+import Admin from "../admin/admin";
+import ContactDetails from "../contacts/conyactDetails";
 
 
 const App = () => {
@@ -21,7 +23,9 @@ const App = () => {
         <Route path="/dry-cleaning" element={<Dry />} />
         <Route path="/handyman" element={<Handyman />} />
         <Route path="/office" element={<Office />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
+      <ContactDetails/>
       <Section5 />
       <Footer/>
     </Box>
