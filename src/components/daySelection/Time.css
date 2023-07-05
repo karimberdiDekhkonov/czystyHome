@@ -1,0 +1,29 @@
+/* TimePicker.css */
+
+.time-picker-container {
+    text-align: center;
+  }
+  
+  .time-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  
+  .time-button {
+    padding: 8px 16px;
+    margin: 4px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  .time-button.selected {
+    background-color: #21f359;
+    color: #fff;
+  }
+  

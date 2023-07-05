@@ -1,0 +1,87 @@
+.biggestDiv {
+  width: 100%;
+  padding-left: 50px;
+}
+
+.bigDiv {
+  display: flex;
+  justify-content: space-between;
+}
+
+.as-line{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.nameInput {
+  background: #fafafa;
+  padding: 1.5vw;
+  font-size: 1.5vw;
+  border: none;
+}
+
+.contactText {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 150%;
+  vertical-align: baseline;
+}
+
+#order-phone {
+  background: #fafafa;
+  padding: 1.5vw;
+  font-size: 1.5vw;
+  border: none;
+}
+
+.emailText {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 150%;
+  vertical-align: baseline;
+}
+
+.emailInput {
+  background: #fafafa;
+  padding: 1.5vw;
+  font-size: 1.5vw;
+  border: none;
+}
+
+.number {
+  display: flex;
+}
+
+.selct {
+  background: #e8e8e8;
+  padding-left: 15px;
+  font-size: 1.5vw;
+  border: none;
+}
+
+.additionText {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 150%;
+  vertical-align: baseline;
+}
+
+.additionInput {
+  background: #fafafa;
+  padding: 1.5vw;
+  font-size: 1.5vw;
+  border: none;
+  height: 10vw;
+  width: 100%;
+}
+
+.contact {
+  opacity: .2;
+}

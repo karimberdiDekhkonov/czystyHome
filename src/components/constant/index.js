@@ -1,3 +1,4 @@
+import logoPath from "./logo.jpg"
 export const category = [
   {
     path: "regular",
@@ -30,8 +31,8 @@ export const category = [
     name: "Office",
   },
 ];
-export const logo =
-  "https://images.squarespace-cdn.com/content/v1/5293a22fe4b0782ba465fe0b/1565372572677-ZWUV5NEKP000OMZTS68B/KOKO+Logo+Lockups+2-02_1200x1200.png?format=1000w";
+export const logo = logoPath
+
 export const flagEng =
   "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1920px-Flag_of_the_United_States.svg.png";
 export const flagPl =

@@ -114,3 +114,19 @@ a {
 
   transition: all 0.3s;
 }
+
+.hr{
+  margin: 50px 0;
+  position: relative;
+  border-top: 2px dashed black;
+  width: 100vw;
+  height: 1px;
+  left: -5vw;
+}
+
+.row-name{
+  margin: 40px , auto;
+  opacity: .2;
+  font-weight: 700;
+  text-transform: uppercase;
+}

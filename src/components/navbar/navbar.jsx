@@ -13,7 +13,7 @@ const Navbar = () => {
       style={{ position: "sticky", top: 0, zIndex: 999, background: "#FFFFFF" }}
     >
       <Link to={"/"}>
-        <img src={logo} alt="logo" height={50} />
+        <img src={logo} alt="logo" height={130} width={150}/>
       </Link>
       <Menu />
       <Translation />

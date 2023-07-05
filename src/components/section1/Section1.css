@@ -1,0 +1,132 @@
+.serviceSelection {
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    text-align: center;
+    gap: 28px;
+  }
+  
+  .ss-h1 {
+    font-size: 56px;
+    letter-spacing: 1px;
+    font-weight: bolder;
+    margin-top: 20px;
+    margin-bottom: 16px;
+  }
+  
+  .ss-h2 {
+    font-size: 32px;
+    font-weight: 300;
+    margin-bottom: 16px;
+  }
+  /* Styling for the form container */
+.ss-office-cn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  margin: 0 auto;
+}
+
+/* Styling for the buttons */
+.ss-isprivate,
+.ss-isoffice {
+  background-color: #f2f2f2;
+  color: #333;
+  border: none;
+  padding: 10px 36px;
+  margin: 5px 20px;
+  cursor: pointer;
+  font-size: 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.ss-active{
+  border: solid blue 2px;
+}
+
+.ss-isoffice:hover, 
+.ss-isprivate:hover, 
+.ss-dec:hover,
+.ss-inc:hover {
+  background-color: #ddd;
+}
+
+
+  .ss-mega-rooms-cn{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 36px;
+  }
+  
+  .ss-rooms-cn {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    background-color: #f2f2f2;
+  }
+  
+  .ss-counters {
+    margin-right: 16px;
+    font-size: 24px;
+    font-weight: bolder;
+    margin: 0 16px;
+  }
+  
+  .ss-rooms {
+    font-size: 24px;
+    margin-right: 16px;
+    font-weight: bolder;
+  }
+  
+  .ss-dec,
+  .ss-inc {
+    padding: 8px 24px;
+    font-size: 36px;
+    border: none;
+    background-color: #f2f2f2;
+    cursor: pointer;
+  }
+  
+  .ss-calculate {
+    width: 480px;
+    height: 80px;
+    font-size: 32px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 16px;
+  }
+  
+  .total-amount {
+    font-size: 24px;
+    color: blue;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .ss-h1 {
+      font-size: 24px;
+    }
+  
+    .ss-h2 {
+      font-size: 18px;
+    }
+  
+    .ss-rooms-cn {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .ss-rooms-cn > * {
+      margin: 4px;
+    }
+  }
+  
+  
