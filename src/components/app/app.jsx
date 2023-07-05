@@ -11,8 +11,11 @@ import Handyman from "../handyman/regular";
 import Office from "../office/regular";
 import Admin from "../admin/admin";
 import ContactDetails from "../contacts/conyactDetails";
+<<<<<<< HEAD
 import Address from '../address/Address'
 import CalendarComponent from '../daySelection/Calendar'
+=======
+>>>>>>> e92be48eae22663bbeadb6fa6a1864df2551b170
 
 
 const App = () => {
@@ -28,9 +31,12 @@ const App = () => {
         <Route path="/office" element={<Office />} />
         <Route path="/admin" element={<Admin />} />
       </Routes>
+<<<<<<< HEAD
       <Section1/>
       <CalendarComponent/>
       <Address/>
+=======
+>>>>>>> e92be48eae22663bbeadb6fa6a1864df2551b170
       <ContactDetails/>
       <Section5 />
       <Footer/>

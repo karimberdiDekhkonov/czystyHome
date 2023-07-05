@@ -6,7 +6,10 @@
 .bigDiv{
     display: flex;
     justify-content: space-between;
+<<<<<<< HEAD
     margin: 40px 0;
+=======
+>>>>>>> e92be48eae22663bbeadb6fa6a1864df2551b170
 }
 
 .nameText{
