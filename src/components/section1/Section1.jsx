@@ -8,41 +8,37 @@ const CleaningCalculator = () => {
   const [kitchens, setKitchens] = useState(1);
   const [totalAmount, setTotalAmount] = useState(151.7);
   const [officces, isOfficce] = useState(false);
+  const roomCost = 45.90; // cost per room
+  const bathroomCost = 49.90; // cost per bathroom
+  const kitchenCost = 55.90; // cost per bathroom
+  const office = 50;
 
   const changeCounter = (type, increase) => {
     if (type === 'room') {
       if (increase) {
         setRooms(rooms + 1);
+        setTotalAmount(totalAmount + roomCost);
       } else {
+        if(rooms !== 1) setTotalAmount(totalAmount - roomCost);
         setRooms(Math.max(1, rooms - 1));
       }
     } else if (type === 'bathroom') {
       if (increase) {
         setBathrooms(bathrooms + 1);
+        setTotalAmount(totalAmount + bathroomCost);
       } else {
+        if(bathrooms !== 1) setTotalAmount(totalAmount - bathroomCost);
         setBathrooms(Math.max(1, bathrooms - 1));
       }
     } else if (type === 'kitchen') {
       if (increase) {
         setKitchens(kitchens + 1);
+        setTotalAmount(totalAmount + kitchenCost);
       } else {
+        if(kitchens !== 1) setTotalAmount(totalAmount - kitchenCost);
         setKitchens(Math.max(1, kitchens - 1));
       }
     }
-  };
-  
-  
-  const calculateTotalAmount = () => {
-    const roomCost = 45.90; // cost per room
-    const bathroomCost = 49.90; // cost per bathroom
-    const kitchenCost = 55.90; // cost per bathroom
-    const office = 50;
-
-    const calculatedAmount = rooms * roomCost + bathrooms * bathroomCost + kitchens * kitchenCost;
-    if(isOfficce==true){
-        calculatedAmount = calculatedAmount + office;
-    }
-    setTotalAmount(calculatedAmount);
   };
 
   return (
@@ -52,11 +48,13 @@ const CleaningCalculator = () => {
       <form className="ss-office-cn">
         <button onClick={(e)=>{
           e.preventDefault();
-          isOfficce(false)}} 
+          isOfficce(false);
+          setTotalAmount(totalAmount - office)}} 
           className={officces==false ? `ss-isprivate ss-active`:`ss-isprivate`}>Individual</button>
         <button onClick={(e)=>{
           e.preventDefault();
-          isOfficce(true)}}
+          isOfficce(true);
+          setTotalAmount(totalAmount + office)}}
           className={officces==true ? `ss-isoffice ss-active`:`ss-isoffice`}>Office</button>
       </form>
       <form className="ss-mega-rooms-cn">
@@ -97,9 +95,10 @@ const CleaningCalculator = () => {
             }}>+</button>
         </div>
       </form>
-      <button className="ss-calculate" onClick={calculateTotalAmount}>
-        Calculate the cost
+      <button className="ss-calculate">
+        Continue
       </button>
+      {<div className="ss-info">Apartment cleaning with {rooms} room and {bathrooms} bathroom, {kitchens} kitchen, corridor {totalAmount} zł</div>}
     </section>
   );
 };

@@ -130,3 +130,14 @@ a {
   font-weight: 700;
   text-transform: uppercase;
 }
+
+.sm-continue{
+  width: 320px;
+  height: 80px;
+  font-size: 32px;
+  background-color: #1c47a6;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 16px;
+}

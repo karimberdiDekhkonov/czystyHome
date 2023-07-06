@@ -5,11 +5,7 @@ export default function ContactDetails() {
     return (
         <>
             <div className='bigestDiv'>
-<<<<<<< HEAD
             <h1 className='row-name'>CONTACT DETAILS</h1>
-=======
-            <h1 className='contact'>CONTACT DETAILS</h1>
->>>>>>> e92be48eae22663bbeadb6fa6a1864df2551b170
                 <div className='bigDiv'>
                     <div>
                         <p className='nameText'>Your name</p>
@@ -36,6 +32,7 @@ export default function ContactDetails() {
                     <p className='additionText'>Additional order information</p>
                     <input type="text" className='additionInput' />
                 </div>
+                <hr className='hr' />
             </div>
         </>
     )

@@ -1,31 +1,15 @@
-/* MonthDaySelection.css */
-
-.month-day-selection-container {
-  text-align: center;
+.ds-mega-cn{
+  padding: 0 50px;
 }
-
-.days {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 8px;
-  margin-top: 10px;
-}
-
-.day {
+.ds-container{
+  margin-top: 60px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  cursor: pointer;
-  background-color: #e0e0e0;
-  border-radius: 4px;
+  justify-content: space-between;
+  padding: 0 100px;
+  width: 100%;
+  gap: 100px;
 }
 
-.day:hover {
-  background-color: #c0c0c0;
-}
-
-.selected {
-  background-color: #2196f3;
-  color: #ffffff;
+.time-pc {
+  max-width: 50%;
 }
