@@ -1,5 +1,20 @@
+.mega-payment-container{
+  display: flex;
+  width: 100%;
+  height: 60vh;
+}
 .payment-container {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
     text-align: center;
+    gap: 28px;
+    padding: 0 50px 50px 50px;
+  }
+  .p-row-name{
+    text-align: start;
   }
   
   .payment-header {
@@ -8,16 +23,28 @@
   
   .payment-methods {
     display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+    align-items: flex-start;
+    justify-content: start;
+    margin: 0 auto;
   }
   
   .payment-method {
-    margin: 0 10px;
+    width: 360px;
+    height: 100px;
+    background-color: #f2f2f2;
+    color: #333;
+    border: none;
+    padding: 10px 36px;
+    margin: 5px 20px;
+    cursor: pointer;
+    font-size: 24px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
   }
   
-  .cash-active {
-    /* Apply styling for active blue state */
+  .payment-active {
+    border: #1c47a6 solid 3px;
   }
   
   .payment-logo {
@@ -28,13 +55,62 @@
   .order-info {
     margin-bottom: 20px;
   }
-  
-  .order-button {
-    padding: 10px 20px;
-    background-color: #ff0000;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+
+  .agreement-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   
+  .agreement-container input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(2.5);
+  }
+  
+  .agreement-container label {
+    font-size: 28px;
+  }
+  
+
+  
+  .order-button {
+    width: 680px;
+    height: 120px;
+    font-size: 32px;
+    background-color: #1c47a6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 16px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-weight: 700;
+  }
+  
+  .left-payment-container{
+    padding-top: 20px;
+    width: 30%;
+    height: 60vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: top;
+    background-color: #f2f2f2;
+  }
+  .left-payment-container > div{
+    margin-left: 32px;
+    align-self: flex-start;
+    font-size: x-large;
+    letter-spacing: 1px;
+    margin-top: 8px;
+  }
+
+  .p-data{
+    font-size: x-large;
+    letter-spacing: -1px;
+    font-weight: 600;
+  }

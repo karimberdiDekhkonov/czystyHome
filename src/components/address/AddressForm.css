@@ -1,3 +1,4 @@
+/* Default styles for all screen sizes */
 .biggestDiv {
   width: 100%;
   padding-left: 50px;
@@ -8,62 +9,25 @@
   justify-content: space-between;
 }
 
-.as-line{
+.as-line {
   display: flex;
   justify-content: space-between;
   margin-top: 40px;
 }
 
-.nameInput {
+.nameInput,
+#order-phone,
+.emailInput,
+.selct,
+.additionInput {
   background: #fafafa;
   padding: 1.5vw;
   font-size: 1.5vw;
   border: none;
 }
 
-.contactText {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 150%;
-  vertical-align: baseline;
-}
-
-#order-phone {
-  background: #fafafa;
-  padding: 1.5vw;
-  font-size: 1.5vw;
-  border: none;
-}
-
-.emailText {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 150%;
-  vertical-align: baseline;
-}
-
-.emailInput {
-  background: #fafafa;
-  padding: 1.5vw;
-  font-size: 1.5vw;
-  border: none;
-}
-
-.number {
-  display: flex;
-}
-
-.selct {
-  background: #e8e8e8;
-  padding-left: 15px;
-  font-size: 1.5vw;
-  border: none;
-}
-
+.contactText,
+.emailText,
 .additionText {
   margin: 0;
   padding: 0;
@@ -73,15 +37,37 @@
   vertical-align: baseline;
 }
 
-.additionInput {
-  background: #fafafa;
-  padding: 1.5vw;
-  font-size: 1.5vw;
-  border: none;
-  height: 10vw;
-  width: 100%;
+.number {
+  display: flex;
 }
 
-.contact {
-  opacity: .2;
+/* Media queries for responsive adjustments */
+@media screen and (max-width: 767px) {
+  .biggestDiv{
+    padding: 0;
+  }
+  /* Adjust font size and padding for smaller screens */
+  .nameInput,
+  #order-phone,
+  .emailInput,
+  .selct,
+  .additionInput {
+    font-size: 4vw;
+    padding: 4vw;
+  }
+
+  /* Adjust font size for smaller screens */
+  .contactText,
+  .emailText,
+  .additionText {
+    font-size: 120%;
+  }
+
+  /* Stack the elements vertically on smaller screens */
+  .bigDiv,
+  .as-line,
+  .number {
+    flex-direction: column;
+    align-items: center;
+  }
 }

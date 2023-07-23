@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Section1.css";
+import { Link } from "react-router-dom";
 
 
 const CleaningCalculator = () => {
@@ -40,6 +41,8 @@ const CleaningCalculator = () => {
       }
     }
   };
+
+  localStorage.setItem("totalAmount", totalAmount)
 
   return (
     <section className="serviceSelection" style={{ height: "100vh", width: "100%" }}>
@@ -95,9 +98,12 @@ const CleaningCalculator = () => {
             }}>+</button>
         </div>
       </form>
+      <Link className="fourth-text" to="#calendar" spy={true} smooth={true} offset={-180} duration={500}>
+     
+      </Link>  
       <button className="ss-calculate">
         Continue
-      </button>
+      </button>     
       {<div className="ss-info">Apartment cleaning with {rooms} room and {bathrooms} bathroom, {kitchens} kitchen, corridor {totalAmount} zł</div>}
     </section>
   );

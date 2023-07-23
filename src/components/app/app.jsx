@@ -9,7 +9,7 @@ import Window from "../window/regular";
 import Dry from "../dry/regular";
 import Handyman from "../handyman/regular";
 import Office from "../office/regular";
-import Admin from "../admin/admin";
+import Calendar from "../daySelection/Calendar";
 import ContactDetails from "../contacts/conyactDetails";
 import Address from '../address/Address'
 import CalendarComponent from '../daySelection/Calendar'
@@ -27,7 +27,6 @@ const App = () => {
         <Route path="/dry-cleaning" element={<Dry />} />
         <Route path="/handyman" element={<Handyman />} />
         <Route path="/office" element={<Office />} />
-        <Route path="/admin" element={<Admin />} />
       </Routes>
       <Section1/>
       <CalendarComponent/>

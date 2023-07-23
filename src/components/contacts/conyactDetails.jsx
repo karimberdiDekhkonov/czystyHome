@@ -9,23 +9,40 @@ export default function ContactDetails() {
                 <div className='bigDiv'>
                     <div>
                         <p className='nameText'>Your name</p>
-                        <input type="text" maxlength="255" class="rounded" className='nameInput' />
+                        <input onChange={
+                            (e)=>{
+                                localStorage.setItem("name", e.target.value)
+                            }} 
+                            type="text" 
+                            maxlength="55" 
+                            class="rounded" 
+                            className='nameInput' />
                     </div>
                     <div>
                         <p className='contactText'>Contact number</p>
                         <div className='number'>
                             <select className='selct'>
                                 <option value="+45">+48</option>
-                                <option value="+380">+380</option>
+                                {/* <option value="+380">+380</option>
                                 <option value="+41">+41</option>
-                                <option value="+49">+49</option>
+                                <option value="+49">+49</option> */}
                             </select>
-                            <input type="tel" class="rounded phone-number" id="order-phone" autocomplete="off" data-intl-tel-input-id="0" placeholder="512 345 678" />
+                            <input
+                                onChange={
+                                (e)=>{
+                                    localStorage.setItem("number", e.target.value)
+                                }} 
+                             type="tel" class="rounded phone-number" id="order-phone" autocomplete="off" data-intl-tel-input-id="0" placeholder="512 345 678" />
                         </div>
                     </div>
                     <div>
                         <p className='emailText'>Email Address</p>
-                        <input type="text" className='emailInput' />
+                        <input onChange={
+                                (e)=>{
+                                    localStorage.setItem("email", e.target.value)
+                                }}  
+                                type="text" 
+                                className='emailInput' />
                     </div>
                 </div>
                 <div>

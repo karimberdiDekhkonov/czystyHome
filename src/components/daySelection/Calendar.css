@@ -13,3 +13,18 @@
 .time-pc {
   max-width: 50%;
 }
+
+@media only screen and (max-width: 600px) {
+  .ds-mega-cn{
+  padding: 0 4%;
+}
+.row-name{
+  margin-left: 20px;
+  margin-bottom: 40px;
+}
+  .ds-container{
+    margin: 0 20px;
+    flex-direction: column;
+    padding: 0;
+  }
+}
