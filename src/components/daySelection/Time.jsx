@@ -9,8 +9,10 @@ const TimePicker = () => {
   };
 
   const continueFunction = () =>{
-    if(localStorage.getItem("selectedDay")!==null && selectedTime !== 0){
+    if(localStorage.getItem("selectedDay")===null && selectedTime === 0){
       alert("Please select a day and time !");
+    }else{
+      localStorage.setItem("selectedTime", selectedTime)
     }
   }
 

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { logo } from "../constant";
 import { Category, Menu, Translation } from "..";
 import { useState } from "react";
+import '../../index.css'
 
 const Navbar = () => {
   const [selectedCategory, setSelectedCategory] = useState("regular");
@@ -9,7 +10,7 @@ const Navbar = () => {
   const selectedCategoryHandler = (category) => setSelectedCategory(category);
   return (
     <div
-      className="d-flex justify-content-between align-items-center p-3"
+      className="d-flex justify-content-between align-items-center header"
       style={{ position: "sticky", top: 0, zIndex: 999, background: "#FFFFFF" }}
     >
       <Link to={"/"}>

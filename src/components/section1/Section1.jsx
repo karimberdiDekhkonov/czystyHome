@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Section1.css";
+import { Link } from "react-router-dom";
 
 
 const CleaningCalculator = () => {
@@ -40,6 +41,8 @@ const CleaningCalculator = () => {
       }
     }
   };
+
+  localStorage.setItem("totalAmount", totalAmount)
 
   return (
     <>

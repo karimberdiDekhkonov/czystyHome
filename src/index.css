@@ -12,6 +12,9 @@ a {
   text-decoration: none;
   color: black;
 }
+.header{
+  padding: 12px;
+}
 .category-img {
   width: 38px;
   height: 38px;
@@ -129,6 +132,7 @@ a {
   opacity: .2;
   font-weight: 700;
   text-transform: uppercase;
+  margin-left: 50px;
 }
 
 .sm-continue{
@@ -140,4 +144,30 @@ a {
   border: none;
   cursor: pointer;
   margin-bottom: 16px;
+}
+.payment-logo {
+  width: 50px;
+  height: 50px;
+}
+
+/* Hide right icons on phone screens */
+@media (max-width: 767px) {
+  .header-icons > *{
+    display: none;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+  .header{
+    padding: 0;
+    background-color: red;
+  }
+  .row-name{
+    margin-left: 36px;
+  }
+  .payment-logo {
+    width: 36px;
+    height: 36px;
+  }
 }

@@ -6,7 +6,7 @@ import './Calendar.css'
 
 const App = () => {
   const [selectedDay, setSelectedDay] = useState(null);
-  localStorage.setItem("selectedDay", selectedDay);
+  console.log(selectedDay)
   return (
     <div className="ds-mega-cn">
       <hr className="hr"/>
@@ -14,15 +14,22 @@ const App = () => {
       <div className="ds-container">
       <Calendar
         value={selectedDay}
-        onChange={setSelectedDay}
+        onChange={(newValue) => {
+        setSelectedDay(newValue);
+        localStorage.setItem(
+          "selectedDay",
+          newValue.day + "." + newValue.month + "." + newValue.year
+        );
+        }}
         minimumDate={utils().getToday()}
         shouldHighlightWeekends
       />
+
       <div className="time-pc">
         <TimePicker/>
       </div>
       </div>
-    </div>
+    </div>    
   );
 };
 

@@ -1,5 +1,4 @@
 .bigestDiv{
-    width: 70%;
     padding-left: 50px;
 }
 
@@ -87,4 +86,8 @@
 
 .contact{
     opacity: .2;
+}
+
+@media screen and (max-width: 767px) {
+    
 }

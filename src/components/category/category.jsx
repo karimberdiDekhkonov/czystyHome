@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 const Category = ({ selectedCategoryHandler, selectedCategory }) => {
   const { t } = useTranslation();
   return (
-    <div className="d-flex flex-row">
+    <div className="header-icons d-flex flex-row">
       {category.map((item) => (
         <Link
           to={`/${item.path}`}

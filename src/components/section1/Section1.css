@@ -27,8 +27,7 @@
     font-size: 40px;
     letter-spacing: 1px;
     font-weight: bolder;
-    margin-top: 20px;
-    margin-bottom: 16px;
+    margin: 0 20px 16px 20px;
   }
   
   .ss-h2 {
@@ -107,7 +106,6 @@
     background-color: #f2f2f2;
     cursor: pointer;
   }
-  
   .ss-calculate {
     width: 480px;
     height: 80px;
@@ -130,21 +128,51 @@
   }
   
   @media only screen and (max-width: 600px) {
+    .serviceSelection{
+      margin-bottom: -140px;
+    }
+    .ss-office-cn{
+      justify-content: space-evenly;
+      padding: 0;
+      margin: 0;
+    }
+    .ss-isprivate,
+    .ss-isoffice{
+      margin: 0;
+      padding: 10px 26px; 
+    }
+    .ss-mega-rooms-cn{
+      flex-direction: column;
+      gap: 4px;
+    }
     .ss-h1 {
       font-size: 24px;
+      margin-bottom: 0;
     }
   
     .ss-h2 {
       font-size: 18px;
+      margin-top: 0;
     }
   
+    .ss-rooms {
+      width: 38%;
+    }
+
     .ss-rooms-cn {
       flex-wrap: wrap;
-      justify-content: center;
+      width: 100%;
     }
-    
+    .ss-calculate{
+      width: 100%;
+      
+    }
     .ss-rooms-cn > * {
       margin: 4px;
+    }
+    .ss-info{
+      padding-left: 22px;
+      padding-right: 22px;
     }
   }
   
