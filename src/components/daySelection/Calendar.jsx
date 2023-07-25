@@ -9,7 +9,7 @@ const App = () => {
   localStorage.setItem("selectedDay", selectedDay);
   return (
     <div className="ds-mega-cn">
-      <hr className="hr" />
+      <hr className="hr"/>
       <h1 className='row-name'>CHOOSE A CONVENIENT DATE AND TIME FOR CLEANING</h1>
       <div className="ds-container">
       <Calendar
