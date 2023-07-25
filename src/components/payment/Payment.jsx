@@ -19,10 +19,11 @@ const Payment = () => {
   };
 
   return (
-    <section className='mega-payment-container'>
-       <div className="payment-container">
+    <>
+      <h1 className='row-name p-row-name'>CHOOSE PAYMENT METHOD</h1>
+      <section className='mega-payment-container'>
+      <div className="payment-container">
       <div className="payment-header">
-        <h1 className='row-name p-row-name'>CHOOSE PAYMENT METHOD</h1>
       </div>
       <div className="payment-methods">
         <button onClick={(e)=>{
@@ -39,7 +40,7 @@ const Payment = () => {
           setCash(false)}} 
           className={cash==false ? `payment-method payment-active`:`payment-method`}>
           <img src={cardLogo} alt="Card" className="payment-logo" />
-          <div>Card online</div>
+          <div>Card</div>
         </button>
       </div>
       <div className="order-info">
@@ -66,6 +67,7 @@ const Payment = () => {
         <div><span className='p-data'>Total amount:</span> {localStorage.getItem("totalAmount")} PLN</div>
       </div>
     </section>
+    </>
   );
 };
 

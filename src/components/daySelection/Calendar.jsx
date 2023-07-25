@@ -8,10 +8,11 @@ const App = () => {
   const [selectedDay, setSelectedDay] = useState(null);
   console.log(selectedDay)
   return (
+    <>
+    <hr className="hr" />
+    <h1 className='row-name'>CHOOSE A CONVENIENT DATE AND TIME FOR CLEANING</h1>
     <div id="#calendar" className="ds-mega-cn">
-      <hr className="hr" />
-      <h1 className='row-name'>CHOOSE A CONVENIENT DATE AND TIME FOR CLEANING</h1>
-      <div className="ds-container">
+     <div className="ds-container">
       <Calendar
         value={selectedDay}
         onChange={(newValue) => {
@@ -30,6 +31,8 @@ const App = () => {
       </div>
       </div>
     </div>
+    </>
+    
   );
 };
 

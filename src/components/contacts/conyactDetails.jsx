@@ -4,10 +4,10 @@ import "./contactDetails.css"
 export default function ContactDetails() {
     return (
         <>
-            <div className='bigestDiv'>
             <h1 className='row-name'>CONTACT DETAILS</h1>
-                <div className='bigDiv'>
-                    <div>
+            <div className='bigestDiv'>
+                <div className='as-line'>
+                    <div className="form-row">
                         <p className='nameText'>Your name</p>
                         <input onChange={
                             (e)=>{
@@ -18,8 +18,8 @@ export default function ContactDetails() {
                             class="rounded" 
                             className='nameInput' />
                     </div>
-                    <div>
-                        <p className='contactText'>Contact number</p>
+                    <div className="form-row">
+                        <p className='nameText'>Contact number</p>
                         <div className='number'>
                             <select className='selct'>
                                 <option value="+45">+48</option>
@@ -35,8 +35,8 @@ export default function ContactDetails() {
                              type="tel" class="rounded phone-number" id="order-phone" autocomplete="off" data-intl-tel-input-id="0" placeholder="512 345 678" />
                         </div>
                     </div>
-                    <div>
-                        <p className='emailText'>Email Address</p>
+                    <div className="form-row">
+                        <p className='nameText'>Email Address</p>
                         <input onChange={
                                 (e)=>{
                                     localStorage.setItem("email", e.target.value)
@@ -44,13 +44,14 @@ export default function ContactDetails() {
                                 type="text" 
                                 className='emailInput' />
                     </div>
+                    <div className="form-row">
+                      <p className='nameText'>Additional information</p>
+                      <input type="text" className='additionInput' />
                 </div>
-                <div>
-                    <p className='additionText'>Additional order information</p>
-                    <input type="text" className='additionInput' />
                 </div>
-                <hr className='hr' />
             </div>
+            <hr className='hr' />
+
         </>
     )
 }

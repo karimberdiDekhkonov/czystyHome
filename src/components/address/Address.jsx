@@ -2,9 +2,10 @@ import React from 'react';
 import './AddressForm.css';
 
 const AddressForm = () => (
-  <div className="biggestDiv">
-    <hr className='hr' />
-    <h1 className='row-name'>ENTER YOUR ADDRESS</h1>
+  <>
+   <hr className='hr'/>
+   <h1 className='row-name'>ENTER YOUR ADDRESS</h1>
+   <div className="biggestDiv">
     <div className='as-line'>
     <div className="form-row">
       <label className="nameText">Street</label>
@@ -41,8 +42,10 @@ const AddressForm = () => (
       <input onChange={(e)=>{localStorage.setItem("intercome", e.target.value)}} className="nameInput" type="text" name="intercomcode" />
     </div>
     </div>
-    <hr className='hr'/>
   </div>
+  <hr className='hr'/>
+  </>
+ 
 );
 
 export default AddressForm;

@@ -1,14 +1,11 @@
 /* Default styles for all screen sizes */
 .biggestDiv {
+  margin-top: 40px;
   width: 100%;
   padding-left: 50px;
-}
-
-.bigDiv {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
-
 .as-line {
   display: flex;
   justify-content: space-between;
@@ -43,17 +40,29 @@
 
 /* Media queries for responsive adjustments */
 @media screen and (max-width: 767px) {
-  .biggestDiv{
-    padding: 0;
+  .as-line {
+    justify-content: start;
+    gap: 12px;
   }
+  .form-row {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+   }
+  
   /* Adjust font size and padding for smaller screens */
   .nameInput,
   #order-phone,
   .emailInput,
   .selct,
   .additionInput {
-    font-size: 4vw;
-    padding: 4vw;
+    font-size: 3vw;
+    padding: 3vw;
+  }
+  .nameText{
+    letter-spacing: -1px;
+    font-size: larger;
+    font-weight: 500;
   }
 
   /* Adjust font size for smaller screens */
@@ -68,6 +77,9 @@
   .as-line,
   .number {
     flex-direction: column;
-    align-items: center;
+    align-items: start;
+  }
+  .biggestDiv{
+    margin-top: -30px;
   }
 }
