@@ -115,9 +115,9 @@
   }
   
   @media only screen and (max-width: 600px) {
-    .serviceSelection{
-      margin-bottom: -140px;
-    }
+    /* .serviceSelection{
+      margin-bottom: -80px;
+    } */
     .ss-office-cn{
       justify-content: space-evenly;
       padding: 0;

@@ -181,7 +181,7 @@
     height: 20px;
 }
 
-@media (min-width: 0) and (max-width: 425px) {                        
+@media screen and (max-width: 767px) {                      
     .footer__inner .content .footer__menu .footer__menu-item:first-child {
         width: 30vw;
         margin-left: 5vw;

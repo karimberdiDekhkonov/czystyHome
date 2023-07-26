@@ -4,8 +4,8 @@
     font-family: 'Futura PT',sans-serif;
     font-weight: 700; 
     font-size: 2vw; 
-    margin-bottom: 1.5vw; 
-    line-height: 2.4vw; 
+    /* margin-bottom: 1.5vw; 
+    line-height: 2.4vw;  */
 } 
  
 .firstdiv{ 
@@ -138,4 +138,37 @@
 
 #span{
     font-weight: 800;
+}
+
+@media screen and (max-width: 767px) {
+    .firstdiv{
+        width: 100%;
+        padding-bottom: 80px;   
+    }
+    .lng-hone{
+        font-size: 6vw; 
+    }
+    .lng-pone{ 
+        font-size: 100%; 
+    } 
+
+    .seconddiv{ 
+        padding: 50px; 
+        display: flex; 
+    } 
+
+    .pta{
+        width: 70%;
+    }
+     
+    .lng-subscribe{ 
+        font-size: 120%; 
+    } 
+     
+    .subscribe_input{ 
+        padding: 10px 20px; 
+        font-size: 120%; 
+        width: 100%;
+        margin-bottom: 20px; 
+    } 
 }
