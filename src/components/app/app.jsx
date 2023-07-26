@@ -2,7 +2,7 @@ import { Navbar, Regular,  } from "..";
 import { Box } from "@mui/material";
 import { Route, Routes } from "react-router-dom";
 import Section5 from "../section5/Section5";
-// import Section1 from "../section1/Section1";
+import Section1 from "../section1/Section1";
 import Footer from "../Footer/Footer";
 import Renovation from "../renovation/regular";
 import Window from "../window/regular";
@@ -28,7 +28,7 @@ const App = () => {
         <Route path="/handyman" element={<Handyman />} />
         <Route path="/office" element={<Office />} />
       </Routes>
-      {/* <Section1/> */}
+      <Section1/>
       <CalendarComponent/>
       <Address/>
       <ContactDetails/>

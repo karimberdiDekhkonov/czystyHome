@@ -2,7 +2,7 @@
 
 .time-picker-container {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 0px;
     display: flex;
     flex-direction: column;
   }

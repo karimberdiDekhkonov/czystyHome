@@ -1,5 +1,5 @@
 .ss-section1{
-  opacity: 2;
+  position: relative;
   width: 30%;
   background: #ecebeb;
   display: flex;
@@ -10,8 +10,8 @@
 
 .serviceSelection {
     /* background-color: red; */
-    position: fixed;
-    top: 50px;
+    position: absolute;
+    top: 10px;
     height: 100%;
     width: 100%;
     display: flex;

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Section1.css";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 
 const CleaningCalculator = () => {
@@ -50,8 +50,7 @@ const CleaningCalculator = () => {
         <div className="ss-section1">
           <h1 className="ss-h1">Cleaning Services in Warsaw</h1>
           <div>
-            <h2 className="ss-h2">The service includes a kitchen, bathroom, rooms and a corridor/hall <br></br>
-            Our employees have all the necessary cleaning products, inventory</h2>
+            <h2 className="ss-h2">Our employees have all the necessary cleaning products, inventory</h2>
           </div>
           <form className="ss-office-cn">
             <button onClick={(e) => {
