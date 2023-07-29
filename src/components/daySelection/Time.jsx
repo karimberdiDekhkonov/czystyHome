@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './Time.css';
 
 const TimePicker = () => {
@@ -8,13 +8,10 @@ const TimePicker = () => {
     setSelectedTime(time);
   };
 
-  const continueFunction = () =>{
-    if(localStorage.getItem("selectedDay")===null && selectedTime === 0){
-      alert("Please select a day and time !");
-    }else{
-      localStorage.setItem("selectedTime", selectedTime)
-    }
-  }
+  const ref = useRef(null);
+  const handleClick = () => {
+    ref.current?.scrollIntoView({behavior: 'smooth'})
+  };
 
   return (
     <div className="time-picker-container">
@@ -34,9 +31,7 @@ const TimePicker = () => {
         })}
       </div>
       <div className='tm-btn-cn'>
-        <button className='sm-continue' 
-        onClick={continueFunction}
-        >Continue</button>
+      <button className="ss-calculate" ref={ref} onClick={handleClick}>Continue</button>
       </div>
     </div>
   );
