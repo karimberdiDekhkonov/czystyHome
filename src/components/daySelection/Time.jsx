@@ -34,7 +34,9 @@ const TimePicker = () => {
         })}
       </div>
       <div className='tm-btn-cn'>
-        <button className='sm-continue' onClick={continueFunction}>Continue</button>
+        <button className='sm-continue' 
+        onClick={continueFunction}
+        >Continue</button>
       </div>
     </div>
   );

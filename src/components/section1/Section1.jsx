@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Section1.css";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 
 const CleaningCalculator = () => {
@@ -50,8 +50,7 @@ const CleaningCalculator = () => {
         <div className="ss-section1">
           <h1 className="ss-h1">Cleaning Services in Warsaw</h1>
           <div>
-            <h2 className="ss-h2">The service includes a kitchen, bathroom, rooms and a corridor/hall <br></br>
-            Our employees have all the necessary cleaning products, inventory</h2>
+            <h2 className="ss-h2">Our employees have all the necessary cleaning products, inventory</h2>
           </div>
           <form className="ss-office-cn">
             <button onClick={(e) => {
@@ -64,7 +63,14 @@ const CleaningCalculator = () => {
               e.preventDefault();
               isOfficce(true);
               setTotalAmount(totalAmount + office)
-            }}
+            }
+            }
+              onDoubleClick={(e) => {
+                e.preventDefault();
+                isOfficce(true);
+                setTotalAmount(totalAmount + 0)
+              }
+              }
               className={officces == true ? `ss-isoffice ss-active` : `ss-isoffice`}>Office</button>
           </form>
           <form className="ss-mega-rooms-cn">
@@ -92,7 +98,6 @@ const CleaningCalculator = () => {
                 changeCounter("bathroom", true);
               }}>+</button>
             </div>
-          </form>
             <div className="ss-rooms-cn">
               <button className="ss-dec" onClick={(e) => {
                 e.preventDefault();
@@ -105,10 +110,9 @@ const CleaningCalculator = () => {
                 changeCounter("kitchen", true);
               }}>+</button>
             </div>
-          {<div className="ss-info">To pay: {totalAmount} zł</div>}
-          <button className="ss-calculate">
-          Order cleaning
-          </button>
+          </form>
+          <button className="ss-calculate">Continue</button>
+          {<div className="ss-info">Apartment cleaning with {rooms} room and {bathrooms} bathroom, {kitchens} kitchen, corridor {totalAmount} zł</div>}
         </div>
       </section>
     </>

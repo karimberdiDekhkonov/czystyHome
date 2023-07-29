@@ -2,7 +2,7 @@ import React from 'react';
 import './AddressForm.css';
 
 const AddressForm = () => (
-  <>
+  <section>
    <hr className='hr'/>
    <h1 className='row-name'>ENTER YOUR ADDRESS</h1>
    <div className="biggestDiv">
@@ -44,7 +44,7 @@ const AddressForm = () => (
     </div>
   </div>
   <hr className='hr'/>
-  </>
+  </section>
  
 );
 
