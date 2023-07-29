@@ -63,7 +63,14 @@ const CleaningCalculator = () => {
               e.preventDefault();
               isOfficce(true);
               setTotalAmount(totalAmount + office)
-            }}
+            }
+            }
+              onDoubleClick={(e) => {
+                e.preventDefault();
+                isOfficce(true);
+                setTotalAmount(totalAmount + 0)
+              }
+              }
               className={officces == true ? `ss-isoffice ss-active` : `ss-isoffice`}>Office</button>
           </form>
           <form className="ss-mega-rooms-cn">
@@ -91,7 +98,6 @@ const CleaningCalculator = () => {
                 changeCounter("bathroom", true);
               }}>+</button>
             </div>
-          </form>
             <div className="ss-rooms-cn">
               <button className="ss-dec" onClick={(e) => {
                 e.preventDefault();
@@ -104,10 +110,9 @@ const CleaningCalculator = () => {
                 changeCounter("kitchen", true);
               }}>+</button>
             </div>
-          {<div className="ss-info">To pay: {totalAmount} zł</div>}
-          <button className="ss-calculate">
-          Order cleaning
-          </button>
+          </form>
+          <button className="ss-calculate">Continue</button>
+          {<div className="ss-info">Apartment cleaning with {rooms} room and {bathrooms} bathroom, {kitchens} kitchen, corridor {totalAmount} zł</div>}
         </div>
       </section>
     </>

@@ -22,7 +22,7 @@ export default function ContactDetails() {
                         <p className='nameText'>Contact number</p>
                         <div className='number'>
                             <select className='selct'>
-                                <option value="+45">+48</option>
+                                <option value="+48">+48</option>
                                 {/* <option value="+380">+380</option>
                                 <option value="+41">+41</option>
                                 <option value="+49">+49</option> */}
@@ -32,7 +32,7 @@ export default function ContactDetails() {
                                 (e)=>{
                                     localStorage.setItem("number", e.target.value)
                                 }} 
-                             type="tel" class="rounded phone-number" id="order-phone" autocomplete="off" data-intl-tel-input-id="0" placeholder="512 345 678" />
+                             type="number" class="rounded phone-number" id="order-phone" autocomplete="off" data-intl-tel-input-id="0" placeholder="512 345 678" />
                         </div>
                     </div>
                     <div className="form-row">

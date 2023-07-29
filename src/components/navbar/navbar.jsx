@@ -8,6 +8,9 @@ const Navbar = () => {
   const [selectedCategory, setSelectedCategory] = useState("regular");
 
   const selectedCategoryHandler = (category) => setSelectedCategory(category);
+
+ 
+
   return (
     <div
       className="d-flex justify-content-between align-items-center header"
@@ -21,6 +24,7 @@ const Navbar = () => {
       <Category
         selectedCategoryHandler={selectedCategoryHandler}
         selectedCategory={selectedCategory}
+        
       />
     </div>
   );
