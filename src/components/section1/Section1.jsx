@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./Section1.css";
 // import { Link } from "react-router-dom";
 
@@ -43,6 +43,11 @@ const CleaningCalculator = () => {
   };
 
   localStorage.setItem("totalAmount", totalAmount)
+
+  const ref = useRef(null);
+  const handleClick = () => {
+    ref.current?.scrollIntoView({behavior: 'smooth'})
+  };
 
   return (
     <>
@@ -111,8 +116,9 @@ const CleaningCalculator = () => {
               }}>+</button>
             </div>
           </form>
-          <button className="ss-calculate">Continue</button>
+          <button className="ss-calculate" ref={ref} onClick={handleClick}>Continue</button>
           {<div className="ss-info">Apartment cleaning with {rooms} room and {bathrooms} bathroom, {kitchens} kitchen, corridor {totalAmount} zł</div>}
+          
         </div>
       </section>
     </>
