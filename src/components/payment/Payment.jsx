@@ -20,7 +20,7 @@ const Payment = () => {
 
   return (
     <>
-      <h1 className='row-name p-row-name'>CHOOSE PAYMENT METHOD</h1>
+      <h1 className='row-name p-row-name'>⇨CHOOSE PAYMENT METHOD⇦</h1>
       <section className='mega-payment-container'>
       <div className="payment-container">
       <div className="payment-header">
