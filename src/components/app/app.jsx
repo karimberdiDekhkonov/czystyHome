@@ -27,6 +27,7 @@ const App = () => {
         <Route path="/handyman" element={<Handyman />} />
         <Route path="/office" element={<Office />} />
       </Routes>
+      <Section1/>
       <CalendarComponent/>
       <Address/>
       <ContactDetails/>

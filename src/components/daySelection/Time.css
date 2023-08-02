@@ -38,12 +38,13 @@
     color: #fff;
   }
   
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 767px) {
     .time-picker-container {
       margin-top: 0;
     }
     .tm-btn-cn{
       margin-top: 40px;
+      width: 100%;
     }
     
     .time-buttons {
@@ -53,6 +54,7 @@
       align-items: center;
       flex-wrap: wrap;
       margin-top: 0px;
+      margin: auto;
     }
     
     .time-button {

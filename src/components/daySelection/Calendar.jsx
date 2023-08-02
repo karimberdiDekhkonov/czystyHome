@@ -10,22 +10,24 @@ const App = () => {
   
 
   return (
-    <div className="ds-mega-cn">
+    <div className="time-picker-container">
       <hr className="hr"/>
       <h1 className='row-name'>CHOOSE A CONVENIENT DATE AND TIME FOR CLEANING</h1>
       <div className="ds-container">
-      <Calendar
-        value={selectedDay}
-        onChange={(newValue) => {
-        setSelectedDay(newValue);
-        localStorage.setItem(
-          "selectedDay",
-          newValue.day + "." + newValue.month + "." + newValue.year
-        );
-        }}
-        minimumDate={utils().getToday()}
-        shouldHighlightWeekends
-      />
+      <div className="ds-hours">
+        <Calendar 
+          value={selectedDay}
+          onChange={(newValue) => {
+          setSelectedDay(newValue);
+          localStorage.setItem(
+              "selectedDay",
+              newValue.day + "." + newValue.month + "." + newValue.year
+            );
+          }}
+          minimumDate={utils().getToday()}
+          shouldHighlightWeekends
+        />
+      </div>
 
       <div className="time-pc">
         <TimePicker/>
