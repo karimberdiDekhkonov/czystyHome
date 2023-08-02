@@ -4,13 +4,21 @@ import './Time.css';
 const TimePicker = () => {
   const [selectedTime, setSelectedTime] = useState('0');
 
+  const filter = () =>{
+    if(localStorage.getItem("selectedDay")===null || localStorage.getItem("selectedTime")===null){
+      alert("Please choose a convenient date and time for cleaning!")
+      return false;
+    }
+    return true;
+  }
   const handleTimeClick = (time) => {
     setSelectedTime(time);
+    localStorage.setItem("selectedTime", time);
   };
 
   const ref = useRef(null);
   const handleClick = () => {
-    ref.current?.scrollIntoView({behavior: 'smooth'})
+    if(filter()) ref.current?.scrollIntoView({behavior: 'smooth'})
   };
 
   return (
