@@ -109,6 +109,16 @@
     font-weight: 600;
   }
 
+  .modal-info{
+    font-size: larger;
+    font-weight: 400;
+    letter-spacing: -4px;
+  }
+ .small-data{
+  font-size: medium;
+  color: #1c47a6;
+ }
+
   @media screen and (max-width: 767px) {
     .mega-payment-container{
       flex-direction: column;

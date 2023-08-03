@@ -4,17 +4,17 @@ import cardLogo from './card.svg'
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Payment.css';
-// import axios from 'axios'; // Import axios for making HTTP requests
-import {Button, Modal} from 'react-bootstrap';
-
+import axios from 'axios'; // Import axios for making HTTP requests
+import Button from 'react-bootstrap/Button';
+import { Modal } from 'react-bootstrap'; 
 
 
 const Payment = () => {
+  const navigate = useNavigate();
   const [agreed, setAgreed] = useState(false);
   const [cash, setCash] = useState(true);
-  
+
   const [show, setShow] = useState(false);
-  const navigate = useNavigate();
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
@@ -101,51 +101,51 @@ const Payment = () => {
     // };
   
     // Function to create a new trip
-    // const createTrip = async () => {
-    //   const tripData = {
-    //     userId: localStorage.getItem("userId"),
-    //     date: localStorage.getItem("selectedDay") + " " + localStorage.getItem("selectedTime"),
-    //     totalCost: parseFloat(localStorage.getItem("totalAmount")),
-    //     paymentType: localStorage.getItem("type"),
-    //     paymentStatus: false,
-    //     enabled: true,
-    //   };
-    //   try {
-    //     await axios.post("http://localhost:8090/api/czystyhome/v1/trip/add", tripData);
-    //   } catch (error) {
-    //     // Handle error if trip creation fails
-    //     console.error("Error creating trip:", error);
-    //   }
-    // };
+    const createTrip = async () => {
+      const tripData = {
+        userId: localStorage.getItem("userId"),
+        date: localStorage.getItem("selectedDay") + " " + localStorage.getItem("selectedTime"),
+        totalCost: parseFloat(localStorage.getItem("totalAmount")),
+        paymentType: localStorage.getItem("type"),
+        paymentStatus: false,
+        enabled: true,
+      };
+      try {
+        await axios.post("http://localhost:8090/api/czystyhome/v1/trip/add", tripData);
+      } catch (error) {
+        // Handle error if trip creation fails
+        console.error("Error creating trip:", error);
+      }
+    };
   
     // Function to handle the order completion
     const handleOrderComplete = () => {
       // Check if the user has accepted the agreement
-      // if (!agreed) {
-      //   alert("Please accept the agreement before completing the order.");
-      //   return;
-      // }
+      if (!agreed) {
+        alert("Please accept the agreement before completing the order.");
+        return;
+      }
   
-      // // Call the functions to create user, address, and trip
+      // Call the functions to create user, address, and trip
       // createUser();
       // createAddress();
       // createTrip();
       handleShow();
     };
   
-    // const handleSaveChanges = () => {
-    //   // Check if the code is exactly 6 digits long
-    //   if (codeInput.length === 6) {
-    //     // Perform any additional actions you want with the code, e.g., submit to the backend
-    //     console.log('Code entered:', codeInput);
+    const handleSaveChanges = () => {
+      // Check if the code is exactly 6 digits long
+      if (codeInput.length === 6) {
+        // Perform any additional actions you want with the code, e.g., submit to the backend
+        console.log('Code entered:', codeInput);
   
-    //     // Close the modal
-    //     handleClose();
-    //   } else {
-    //     // Display an error message for an invalid code
-    //     alert('Please enter a valid 6-digit code.');
-    //   }
-    // };
+        // Close the modal
+        handleClose();
+      } else {
+        // Display an error message for an invalid code
+        alert('Please enter a valid 6-digit code.');
+      }
+    };
 
     // Call setPayment() to set the initial payment method
     setPayment();
@@ -203,11 +203,16 @@ const Payment = () => {
     <div>
        <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title className='d-flex'>
+            <div modal-info>
+                Please enter the verification code using either the phone number<span className='small-data'> +48{localStorage.getItem("number")}</span> or the email address<span className='small-data'> {localStorage.getItem("email")}</span> .
+            </div> 
+          </Modal.Title>
         </Modal.Header>
         <Modal.Body>
            <input
-              className='code-input'
+              className='code-input form-control'
+              placeholder='123456'
               type="text"
               value={codeInput}
               onChange={(e) => setCodeInput(e.target.value)}
@@ -216,9 +221,10 @@ const Payment = () => {
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
-            Close
+          <a className='text-white' href="tel:+48538946491">Help</a>
+            
           </Button>
-          <Button variant="primary" className='toTop' onClick={checkCod}>
+          <Button variant="primary" onClick={checkCod}>
             Save Changes
           </Button>
         </Modal.Footer>

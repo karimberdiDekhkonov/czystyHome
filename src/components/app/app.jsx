@@ -9,7 +9,7 @@ import Window from "../window/regular";
 import Dry from "../dry/regular";
 import Handyman from "../handyman/regular";
 import Office from "../office/regular";
-import ContactDetails from "../contacts/conyactDetails";
+import ContactDetails from "../contacts/contactDetails";
 import Address from '../address/Address'
 import CalendarComponent from '../daySelection/Calendar'
 import Payment from "../payment/Payment";

@@ -5,8 +5,33 @@ import './AddressForm.css';
 const AddressForm = () => {
 
   const ref = useRef(null);
+
+  const filter = () =>{
+    if(localStorage.getItem("street")===null){
+      alert("Please enter your street name!")
+      return false;
+    }
+    if(localStorage.getItem("zip")===null){
+      alert("Please enter the zip code as `00-000` format!")
+      return false;
+    }
+    if(localStorage.getItem("zip").length!==6){
+      alert("Please enter the zip code as `00-000` format!")
+      return false;
+    }
+    if(localStorage.getItem("houseNumber")===null){
+      alert("Please enter house number!")
+      return false;
+    }
+    if(localStorage.getItem("appNumber")===null){
+      alert("Please enter apartment number!")
+      return false;
+    }
+    return true;
+  }
+
   const handleClick = () => {
-    ref.current?.scrollIntoView({ behavior: 'smooth' })
+    if(filter()) ref.current?.scrollIntoView({ behavior: 'smooth' })
   };
 
   return (
@@ -51,7 +76,7 @@ const AddressForm = () => {
           </div>
         </div>
       </div>
-      <div style={{textAlign: "center", marginTop: "16px"}}>
+      <div style={{textAlign: "center", marginTop: "46px"}}>
         <button className="ss-calculate" ref={ref} onClick={handleClick}>Continue</button>
       </div>
       <hr className='hr' />

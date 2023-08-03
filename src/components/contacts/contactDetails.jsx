@@ -5,8 +5,33 @@ import "./contactDetails.css"
 export default function ContactDetails() {
 
     const ref = useRef(null);
+
+    const filter = () =>{
+        if(localStorage.getItem("name")===null){
+          alert("Please enter your name!")
+          return false;
+        }
+        if(localStorage.getItem("name").length<3){
+            alert("Minimum name length is 3!")
+            return false;
+          }
+        if(localStorage.getItem("number")===null){
+          alert("Please enter your Phone number!")
+          return false;
+        }
+        if(localStorage.getItem("email")===null){
+          alert("Please enter your email address!")
+          return false;
+        }
+        if(!localStorage.getItem("email").includes("@")){
+            alert("email must include @!")
+            return false;
+        }
+        return true;
+      }
+
     const handleClick = () => {
-        ref.current?.scrollIntoView({ behavior: 'smooth' })
+        if(filter()) ref.current?.scrollIntoView({ behavior: 'smooth' })
     };
 
     return (
