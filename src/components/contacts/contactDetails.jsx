@@ -86,7 +86,7 @@ export default function ContactDetails() {
                 <button className="ss-calculate" ref={ref} onClick={handleClick}>Continue</button>
             </div>
             <hr className='hr' />
-
+    
         </>
     )
 }

@@ -1,22 +1,20 @@
 // Payment.jsx
 import cashLogo from './cash.svg'
 import cardLogo from './card.svg'
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Payment.css';
 import axios from 'axios'; // Import axios for making HTTP requests
 import Button from 'react-bootstrap/Button';
 import { Modal } from 'react-bootstrap'; 
-import { useNavigate } from 'react-router-dom';
 
 
 const Payment = () => {
   const navigate = useNavigate();
   const [agreed, setAgreed] = useState(false);
   const [cash, setCash] = useState(true);
-  const [paypal, setPaypal] = useState('')
 
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
@@ -32,45 +30,75 @@ const Payment = () => {
     setAgreed(!agreed);
   };
 
+  const [toTopButton, setToTopButton] = useState(false) 
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if(window.scrollY > 100){
+        setToTopButton(true)
+      } else {
+        setToTopButton(false)
+      }
+    })
+  }, [])
+
+  const scrollUp = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    })
+  }
+
+  const checkCod = () => {
+    if( parseInt(codeInput) === 123456) {
+      navigate(`/success`);
+      handleClose();
+      scrollUp()
+    } else {
+      alert('error cod')
+    }
+  }
+
+
 
     // Function to create a new user
-    const createUser = async () => {
-      const userData = {
-        firstname: localStorage.getItem("name"),
-        email: localStorage.getItem("email"),
-        phoneNumber: "+48" + localStorage.getItem("number"),
-      };
-      try {
-        const response = await axios.post("http://localhost:8090/api/auth/register", userData);
-        // Save the userId returned from the response
-        localStorage.setItem("userId", response.data.userId);
-      } catch (error) {
-        // Handle error if registration fails
-        console.error("Error creating user:", error);
-      }
-    };
+    // const createUser = async () => {
+    //   const userData = {
+    //     firstname: localStorage.getItem("name"),
+    //     email: localStorage.getItem("email"),
+    //     phoneNumber: "+48" + localStorage.getItem("number"),
+    //   };
+    //   try {
+    //     const response = await axios.post("http://localhost:8090/api/auth/register", userData);
+    //     // Save the userId returned from the response
+    //     localStorage.setItem("userId", response.data.userId);
+    //   } catch (error) {
+    //     // Handle error if registration fails
+    //     console.error("Error creating user:", error);
+    //   }
+    // };
   
     // Function to create a new address
-    const createAddress = async () => {
-      const addressData = {
-        userId: localStorage.getItem("userId"),
-        city: localStorage.getItem("city"),
-        street: localStorage.getItem("street"),
-        houseNumber: localStorage.getItem("houseNumber"),
-        apartmentNumber: localStorage.getItem("apartmentNumber"),
-        cage: localStorage.getItem("cage"),
-        floor: localStorage.getItem("floor"),
-        intercomCode: localStorage.getItem("intercomCode"),
-        zipcode: localStorage.getItem("zip"),
-        additionalNote: "Hi", // You can change this value as needed
-      };
-      try {
-        await axios.post("http://localhost:8090/api/czystyhome/v1/address/add", addressData);
-      } catch (error) {
-        // Handle error if address creation fails
-        console.error("Error creating address:", error);
-      }
-    };
+    // const createAddress = async () => {
+    //   const addressData = {
+    //     userId: localStorage.getItem("userId"),
+    //     city: localStorage.getItem("city"),
+    //     street: localStorage.getItem("street"),
+    //     houseNumber: localStorage.getItem("houseNumber"),
+    //     apartmentNumber: localStorage.getItem("apartmentNumber"),
+    //     cage: localStorage.getItem("cage"),
+    //     floor: localStorage.getItem("floor"),
+    //     intercomCode: localStorage.getItem("intercomCode"),
+    //     zipcode: localStorage.getItem("zip"),
+    //     additionalNote: "Hi", // You can change this value as needed
+    //   };
+    //   try {
+    //     await axios.post("http://localhost:8090/api/czystyhome/v1/address/add", addressData);
+    //   } catch (error) {
+    //     // Handle error if address creation fails
+    //     console.error("Error creating address:", error);
+    //   }
+    // };
   
     // Function to create a new trip
     const createTrip = async () => {
@@ -89,29 +117,6 @@ const Payment = () => {
         console.error("Error creating trip:", error);
       }
     };
-
-    const pay = async () => {
-      try {
-        const payload = {
-          price: localStorage.getItem("totalAmount")
-        };
-  
-        const response = await axios.post(
-          'http://localhost:8090/api/paypal/pay',
-          payload,
-          {
-            headers: {
-              'Content-Type': 'application/json'
-            }
-          }
-        );
-  
-        console.log('Payment response:', response.data);
-        setPaypal(response.data);
-      } catch (error) {
-        console.error('Error making payment:', error);
-      }
-    };
   
     // Function to handle the order completion
     const handleOrderComplete = () => {
@@ -125,12 +130,21 @@ const Payment = () => {
       // createUser();
       // createAddress();
       // createTrip();
-      if(cash === false) {
-        pay();
-        // paypal== www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-189855167Y1251056
-        window.location.replace(paypal);
+      handleShow();
+    };
+  
+    const handleSaveChanges = () => {
+      // Check if the code is exactly 6 digits long
+      if (codeInput.length === 6) {
+        // Perform any additional actions you want with the code, e.g., submit to the backend
+        console.log('Code entered:', codeInput);
+  
+        // Close the modal
+        handleClose();
+      } else {
+        // Display an error message for an invalid code
+        alert('Please enter a valid 6-digit code.');
       }
-      else handleShow();
     };
 
     // Call setPayment() to set the initial payment method
@@ -202,6 +216,7 @@ const Payment = () => {
               type="text"
               value={codeInput}
               onChange={(e) => setCodeInput(e.target.value)}
+              maxLength="6"
             />
         </Modal.Body>
         <Modal.Footer>
@@ -209,8 +224,8 @@ const Payment = () => {
           <a className='text-white' href="tel:+48538946491">Help</a>
             
           </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Submit
+          <Button variant="primary" onClick={checkCod}>
+            Save Changes
           </Button>
         </Modal.Footer>
       </Modal>
