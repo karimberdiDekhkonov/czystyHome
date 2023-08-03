@@ -1,7 +1,7 @@
 import logoPath from "./logo.jpg"
 export const category = [
   {
-    path: "regular",
+    path: "",
     icon: "https://cleanwhale.pl/assets/frontend/images/icons/default-order.svg",
     name: "Regular",
   },
@@ -30,6 +30,13 @@ export const category = [
     icon: "https://cleanwhale.pl/assets/frontend/images/icons/office-order.svg",
     name: "Office",
   },
+];
+
+export const success = [
+  {
+    path: "success",
+    name: "Save change"
+  }
 ];
 export const logo = logoPath
 

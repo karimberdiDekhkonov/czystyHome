@@ -1,4 +1,4 @@
-import { Navbar  } from "..";
+import { Navbar } from "..";
 import { Box } from "@mui/material";
 import { Route, Routes } from "react-router-dom";
 import Section5 from "../section5/Section5";
@@ -13,6 +13,7 @@ import ContactDetails from "../contacts/conyactDetails";
 import Address from '../address/Address'
 import CalendarComponent from '../daySelection/Calendar'
 import Payment from "../payment/Payment";
+import Success from "../success/Success";
 
 
 const App = () => {
@@ -20,14 +21,15 @@ const App = () => {
     <Box>
       <Navbar />
       <Routes>
+        <Route path="/" element={<Section1 />} />
         <Route path="/regular" element={<Section1 />} />
         <Route path="/renovation" element={<Renovation />} />
         <Route path="/windows" element={<Window />} />
         <Route path="/dry-cleaning" element={<Dry />} />
         <Route path="/handyman" element={<Handyman />} />
         <Route path="/office" element={<Office />} />
+        <Route path="/success" element={<Success />} />
       </Routes>
-      <Section1/>
       <CalendarComponent/>
       <Address/>
       <ContactDetails/>
