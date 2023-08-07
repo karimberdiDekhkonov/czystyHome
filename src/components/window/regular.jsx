@@ -1,4 +1,10 @@
 import React, { useState, useRef } from "react";
+import ContactDetails from "../contacts/contactDetails";
+import Address from '../address/Address'
+import CalendarComponent from '../daySelection/Calendar'
+import Payment from "../payment/Payment";
+import Section5 from "../section5/Section5";
+import Footer from "../Footer/Footer";
 
 
 
@@ -66,6 +72,12 @@ const Wondow = () => {
           {<div className="ss-info">Apartment cleaning with {rooms} windows corridor {totalAmount} zł</div>}
           
         </div>
+        <CalendarComponent />
+        <Address />
+        <ContactDetails />
+        <Payment />
+        <Section5 />
+        <Footer />
       </section>
     </>
   );
