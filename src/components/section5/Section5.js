@@ -27,7 +27,7 @@ export default function Section5() {
                 <div className='pta'>
                     <p className='lng-subscribe'>Subscribe to Newsletter</p>
                     <input className='subscribe_input' type='text' maxLength="255" placeholder='Your e-mail adress'></input>
-                    <button className='lng-subscribe_button'>Subscribe</button>
+                    <button className='lng-subscribe_button' >Subscribe</button>
                     <p className='lng-subscribe_unsubscribe'>How to unsubscribe from the newsletter?</p>
                 </div>
                 <div className='social_network'>
