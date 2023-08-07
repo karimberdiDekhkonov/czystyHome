@@ -1,6 +1,12 @@
 import React, { useState, useRef } from "react";
 import "./Section1.css";
-// import { Link } from "react-router-dom";
+import ContactDetails from "../contacts/contactDetails";
+import Address from '../address/Address'
+import CalendarComponent from '../daySelection/Calendar'
+import Payment from "../payment/Payment";
+import Section5 from "../section5/Section5";
+import Footer from "../Footer/Footer";
+import { Link } from "react-router-dom";
 
 
 const CleaningCalculator = () => {
@@ -46,7 +52,7 @@ const CleaningCalculator = () => {
 
   const ref = useRef(null);
   const handleClick = () => {
-    ref.current?.scrollIntoView({behavior: 'smooth'})
+    ref.current?.scrollIntoView({ behavior: 'smooth' })
   };
 
   return (
@@ -118,8 +124,14 @@ const CleaningCalculator = () => {
           </form>
           <button className="ss-calculate" ref={ref} onClick={handleClick}>Continue</button>
           {<div className="ss-info">Apartment cleaning with {rooms} room and {bathrooms} bathroom, {kitchens} kitchen, corridor {totalAmount} zł</div>}
-          
+
         </div>
+        <CalendarComponent />
+        <Address />
+        <ContactDetails />
+        <Payment />
+        <Section5 />
+        <Footer />
       </section>
     </>
   );

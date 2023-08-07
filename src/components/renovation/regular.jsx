@@ -1,4 +1,10 @@
 import React, { useState, useRef } from "react";
+import ContactDetails from "../contacts/contactDetails";
+import Address from '../address/Address'
+import CalendarComponent from '../daySelection/Calendar'
+import Payment from "../payment/Payment";
+import Section5 from "../section5/Section5";
+import Footer from "../Footer/Footer";
 // import "./renovation.css";
 // import { Link } from "react-router-dom";
 
@@ -29,14 +35,14 @@ const Renovation = () => {
         if (bathrooms !== 1) setTotalAmount(totalAmount - bathroomCost);
         setBathrooms(Math.max(1, bathrooms - 1));
       }
-    } 
+    }
   };
 
   localStorage.setItem("totalAmount", totalAmount)
 
   const ref = useRef(null);
   const handleClick = () => {
-    ref.current?.scrollIntoView({behavior: 'smooth'})
+    ref.current?.scrollIntoView({ behavior: 'smooth' })
   };
 
   return (
@@ -44,14 +50,14 @@ const Renovation = () => {
       <section className="serviceSelection">
         <div className="ss-section1">
           <h1 className="ss-h1">After builders cleaning services in Warsaw</h1>
-          
+
           <form className="ss-office-cn">
             <button onClick={(e) => {
               e.preventDefault();
               isOfficce(false);
               setTotalAmount(totalAmount - office)
             }}
-              className={officces == false ? `ss-isprivate ss-active` : `ss-isprivate`} style={{height: "96px"}}>Individual</button>
+              className={officces == false ? `ss-isprivate ss-active` : `ss-isprivate`} style={{ height: "96px" }}>Individual</button>
             <button onClick={(e) => {
               e.preventDefault();
               isOfficce(true);
@@ -60,7 +66,7 @@ const Renovation = () => {
               className={officces == true ? `ss-isoffice ss-active` : `ss-isoffice`}>Legal entity</button>
           </form>
           <div>
-            <h1  style={{opacity: ".2", }}>APARTMENT AFTER RENOVATION</h1>
+            <h1 style={{ opacity: ".2", }}>APARTMENT AFTER RENOVATION</h1>
           </div>
           <form className="ss-mega-rooms-cn">
             <div className="ss-rooms-cn">
@@ -90,8 +96,14 @@ const Renovation = () => {
           </form>
           <button className="ss-calculate" ref={ref} onClick={handleClick}>Continue</button>
           {<div className="ss-info">Apartment cleaning with {area} area and {bathrooms} windows,  corridor {totalAmount} zł</div>}
-          
+
         </div>
+        <CalendarComponent />
+        <Address />
+        <ContactDetails />
+        <Payment />
+        <Section5 />
+        <Footer />
       </section>
     </>
   );
