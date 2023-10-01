@@ -19,10 +19,11 @@ const App = () => {
           value={selectedDay}
           onChange={(newValue) => {
           setSelectedDay(newValue);
-          localStorage.setItem(
-              "selectedDay",
-              newValue.day + "." + newValue.month + "." + newValue.year
-            );
+          
+          if(newValue.month<10) localStorage.setItem("selectedDay", newValue.year+ "-0" + newValue.month + "-" + newValue.day);
+          if(newValue.day<10) localStorage.setItem("selectedDay", newValue.year+ "-" + newValue.month + "-0" + newValue.day);
+          if(newValue.month<10&&newValue.day<10) localStorage.setItem("selectedDay", newValue.year+ "-0" + newValue.month + "-0" + newValue.day);
+          
           }}
           minimumDate={utils().getToday()}
           shouldHighlightWeekends

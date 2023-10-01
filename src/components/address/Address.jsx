@@ -45,7 +45,7 @@ const AddressForm = () => {
             <input onChange={(e) => { localStorage.setItem("street", e.target.value) }} className="nameInput" type="text" name="street" />
           </div>
           <div className="form-row">
-            <label className="nameText">Zip code</label>
+            <label className="nameText">Zip code (optional)</label>
             <input onChange={(e) => { localStorage.setItem("zip", e.target.value) }} className="nameInput" type="text" name="zipcode" />
           </div>
           <div className="form-row">
@@ -59,19 +59,19 @@ const AddressForm = () => {
         </div>
         <div className='as-line'>
           <div className="form-row">
-            <label className="nameText">Building</label>
+            <label className="nameText">Building (optional)</label>
             <input onChange={(e) => { localStorage.setItem("buildingNumber", e.target.value) }} className="nameInput" type="text" name="building" />
           </div>
           <div className="form-row">
-            <label className="nameText">Frame number</label>
+            <label className="nameText">Frame number (optional)</label>
             <input onChange={(e) => { localStorage.setItem("frame", e.target.value) }} className="nameInput" type="text" name="framenum" />
           </div>
           <div className="form-row">
-            <label className="nameText">Floor</label>
+            <label className="nameText">Floor (optional)</label>
             <input onChange={(e) => { localStorage.setItem("floor", e.target.value) }} className="nameInput" type="text" name="floor" />
           </div>
           <div className="form-row">
-            <label className="nameText">The intercom code</label>
+            <label className="nameText">Intercom code (optional)</label>
             <input onChange={(e) => { localStorage.setItem("intercome", e.target.value) }} className="nameInput" type="text" name="intercomcode" />
           </div>
         </div>

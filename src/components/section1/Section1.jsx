@@ -21,6 +21,7 @@ const CleaningCalculator = () => {
   const office = 50;
 
   const changeCounter = (type, increase) => {
+
     if (type === 'room') {
       if (increase) {
         setRooms(rooms + 1);
@@ -49,6 +50,10 @@ const CleaningCalculator = () => {
   };
 
   localStorage.setItem("totalAmount", totalAmount)
+  localStorage.setItem("cleaningData", "room:" + rooms+
+  " bathroom: "+bathrooms+
+  " kitchen:" +kitchens)
+  
 
   const ref = useRef(null);
   const handleClick = () => {

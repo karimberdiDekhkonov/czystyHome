@@ -1,0 +1,10 @@
+.success-container{
+    color: #00d34f;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.gif{
+    width: 250px;
+    margin: auto;
+}

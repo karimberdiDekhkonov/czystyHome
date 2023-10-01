@@ -1,7 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
+import gifImage from './successGif.gif';
+import './Success.css'
+import { Container } from 'react-bootstrap';
 
 export default function Success() {
+  localStorage.clear();
   return (
-    <h1>Success</h1>
+    <Container className='success-container'>
+        <img className='gif' src={gifImage} alt="gif" />
+        <h1>You have successfully booked!</h1>
+        
+    </Container>
+  
   )
 }
