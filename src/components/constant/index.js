@@ -15,16 +15,16 @@ export const category = [
     icon: "https://cleanwhale.pl/assets/frontend/images/icons/window-order.svg",
     name: "Window cleaning",
   },
-  {
-    path: "dry-cleaning",
-    icon: "https://cleanwhale.pl/assets/frontend/images/icons/dry-order.svg",
-    name: "Dry cleaning",
-  },
-  {
-    path: "handyman",
-    icon: "https://cleanwhale.pl/assets/frontend/images/icons/handyman-order.svg",
-    name: "Handyman",
-  },
+  // {
+  //   path: "dry-cleaning",
+  //   icon: "https://cleanwhale.pl/assets/frontend/images/icons/dry-order.svg",
+  //   name: "Dry cleaning",
+  // },
+  // {
+  //   path: "handyman",
+  //   icon: "https://cleanwhale.pl/assets/frontend/images/icons/handyman-order.svg",
+  //   name: "Handyman",
+  // },
   {
     path: "office",
     icon: "https://cleanwhale.pl/assets/frontend/images/icons/office-order.svg",

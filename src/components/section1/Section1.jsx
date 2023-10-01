@@ -1,12 +1,10 @@
 import React, { useState, useRef } from "react";
-import "./Section1.css";
 import ContactDetails from "../contacts/contactDetails";
 import Address from '../address/Address'
 import CalendarComponent from '../daySelection/Calendar'
 import Payment from "../payment/Payment";
 import Section5 from "../section5/Section5";
 import Footer from "../Footer/Footer";
-import { Link } from "react-router-dom";
 
 
 const CleaningCalculator = () => {
