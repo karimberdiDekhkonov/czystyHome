@@ -1,31 +1,27 @@
 import React from 'react'
 import {useRef} from "react"
 import "./contactDetails.css"
+import { useTranslation } from "react-i18next";
 
 export default function ContactDetails() {
 
+    const l  = localStorage.getItem("lng");
     const ref = useRef(null);
+  const t = useTranslation();
+
 
     const filter = () =>{
         if(localStorage.getItem("name")===null){
-          alert("Please enter your name!")
+          alert(l===`pl`?`Proszę wpisać swoje imię!`:`Please enter your name!`)
           return false;
         }
         if(localStorage.getItem("name").length<3){
-            alert("Minimum name length is 3!")
+            alert(l===`pl`?`Minimalna długość nazwy to 3!`:`Minimum name length is 3!`)
             return false;
           }
         if(localStorage.getItem("number")===null){
-          alert("Please enter your Phone number!")
+          alert(l===`pl`?`Proszę podać swój numer telefonu!`:`Please enter your Phone number!`)
           return false;
-        }
-        if(localStorage.getItem("email")===null){
-          alert("Please enter your email address!")
-          return false;
-        }
-        if(!localStorage.getItem("email").includes("@")){
-            alert("email must include @!")
-            return false;
         }
         return true;
       }
@@ -36,11 +32,11 @@ export default function ContactDetails() {
 
     return (
         <>
-            <h1 className='row-name'>CONTACT DETAILS</h1>
+            <h1 className='row-name'>{l===`pl`?`DANE KONTAKTOWE`:`CONTACT DETAILS`}</h1>
             <div className='bigestDiv'>
                 <div className='as-line'>
                     <div className="form-row">
-                        <p className='nameText'>Your name</p>
+                        <p className='nameText'>{l===`pl`?`Imię`:`Your name`}</p>
                         <input onChange={
                             (e) => {
                                 localStorage.setItem("name", e.target.value)
@@ -51,7 +47,7 @@ export default function ContactDetails() {
                             className='nameInput' />
                     </div>
                     <div className="form-row">
-                        <p className='nameText'>Contact number</p>
+                        <p className='nameText'>{l===`pl`?`Telefon kontaktowy`:`Contact number`}</p>
                         <div className='number'>
                             <select className='selct'>
                                 <option value="+48">+48</option>
@@ -68,7 +64,7 @@ export default function ContactDetails() {
                         </div>
                     </div>
                     <div className="form-row">
-                        <p className='nameText'>Email Address</p>
+                        <p className='nameText'>{l===`pl`?`Adres e-mail (oe)`:`Email Address (ol)`}</p>
                         <input onChange={
                             (e) => {
                                 localStorage.setItem("email", e.target.value)
@@ -77,13 +73,13 @@ export default function ContactDetails() {
                             className='emailInput' />
                     </div>
                     <div className="form-row">
-                        <p className='nameText'>Additional information</p>
+                        <p className='nameText'>{l===`pl`?`dodatkowe info (oe)`:`Additional info (ol)`}</p>
                         <input type="text" className='additionInput' />
                     </div>
                 </div>
             </div>
             <div style={{ textAlign: "center", marginTop: "16px" }}>
-                <button className="ss-calculate" ref={ref} onClick={handleClick}>Continue</button>
+                <button className="ss-calculate" ref={ref} onClick={handleClick}>{l===`pl`?`Kontynuować`:`Continue`}</button>
             </div>
             <hr className='hr' />
     

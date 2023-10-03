@@ -64,7 +64,7 @@ function Footer() {
                             <div className="contacts">
                                 <Link target='_blank'>
                                     <img src="https://cleanwhale.pl/assets/frontend/images/icons/footer/map.svg" alt="" />
-                                    <span>Warszawa, Łucka 18/2004, 00-845</span>
+                                    <span>Szczęśliwicka 2 / 1A, 02-793 Warszawa, Polska</span>
                                 </Link>
                                 <Link to='/' target='_blank'>
                                     <img src="https://cleanwhale.pl/assets/frontend/images/icons/footer/email.svg" alt="" />
@@ -72,7 +72,7 @@ function Footer() {
                                 </Link>
                                 <Link target='_blank'>
                                     <img src="https://cleanwhale.pl/assets/frontend/images/icons/footer/phone.svg" alt="" />
-                                    <span>+48 795 029 169</span>
+                                    <span>+48 538 946 491</span>
                                 </Link>
                             </div>
                             <div className="documents">
@@ -83,7 +83,7 @@ function Footer() {
                         </div>
                         <div className="copyright-payments">
                             <div className="copyright">
-                                <p>Clean Whale Sp. z o.o., KRS 0000868230, NIP: 6751738063, REGON: 38745511400000</p>
+                                <p>Clean Whale Sp. z o.o., KRS 0001030507, NIP: 7011139395, REGON: 525038714</p>
                                 <p>Warszawa, Łucka 18/2004, 00-845</p>
                             </div>
                             <div className="payments">

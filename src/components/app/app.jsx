@@ -8,6 +8,8 @@ import Dry from "../dry/regular";
 import Handyman from "../handyman/regular";
 import Office from "../office/regular";
 import Success from "../success/Success";
+import Regulation from '../regulations/Regulation'
+import Privacy from '../privacy/Privacy'
 
 
 const App = () => {
@@ -23,6 +25,8 @@ const App = () => {
         <Route path="/handyman" element={<Handyman />} /> */}
         <Route path="/office" element={<Office />} />
         <Route path="/success" element={<Success />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/regulation" element={<Regulation />} />
       </Routes>
     </Box>
   );

@@ -5,12 +5,17 @@ import React, { useState } from 'react';
 import './Payment.css';
 import axios from 'axios'; // Import axios for making HTTP requests
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
+
 
 
 const Payment = () => {
   const [agreed, setAgreed] = useState(false);
   const [cash, setCash] = useState(true);
-  const navigate = useNavigate();
+  const navigate = useNavigate()
+  const l  = localStorage.getItem("lng");
+  const t = useTranslation();
+
 
 
   const setPayment = () => {
@@ -33,20 +38,21 @@ const Payment = () => {
         street: localStorage.getItem("street"),
         houseNumber: localStorage.getItem("houseNumber"),
         apartmentNumber: localStorage.getItem("appNumber"),
-        tripDateTime: localStorage.getItem("selectedDay") + "T"+localStorage.getItem("selectedTime")+":00+02:00"
+        tripDateTime: localStorage.getItem("selectedDay") + "T"+localStorage.getItem("selectedTime")+":00+02:00",
+        paymentType: localStorage.getItem("type"),
+        lng: l
       };
       console.log(tripData)
-      //2023-09-30
       try {
-        const response = await axios.post("https://4784-188-146-255-41.ngrok-free.app/add", tripData);
+        const response = await axios.post(" https://9e51-188-146-122-228.ngrok-free.app/add", tripData);
         if(response.data===true){
           navigate("/success")
         }else{
-          alert("Sorry, someone has already booked that time. Please choose another time.")
+          alert(l===`pl`?`Przepraszamy, ktoś już zarezerwował ten termin. Proszę wybrać inny termin.`:`Sorry, someone has already booked that time. Please choose another time.`)
         }
       } catch (error) {
-        // Handle error if trip creation fails
-        console.error("Error creating trip:", error);
+        alert(l===`pl`?`Hmm, wygląda na to, że pominąłeś wprowadzenie niektórych wymaganych danych.`:`Hmm, it seems like you have missed entering some required data.`)
+      
       }
     };
 
@@ -55,7 +61,7 @@ const Payment = () => {
     const handleOrderComplete = () => {
       // Check if the user has accepted the agreement
       if (!agreed) {
-        alert("Please accept the agreement before completing the order.");
+        alert(l===`pl`?`Przed realizacją zamówienia prosimy o akceptację umowy.`:`Please accept the agreement before completing the order.`)
         return;
       }
       // Call the functions to create user, address, and trip
@@ -67,7 +73,7 @@ const Payment = () => {
 
   return (
     <>
-      <h1 className='row-name p-row-name'>⇨CHOOSE PAYMENT METHOD⇦</h1>
+      <h1 className='row-name p-row-name'>{l===`pl`?`WYBIERZ METODĘ PŁATNOŚCI`:`CHOOSE PAYMENT METHOD`}</h1>
       <section className='mega-payment-container'>
       <div className="payment-container">
       <div className="payment-header">
@@ -79,7 +85,7 @@ const Payment = () => {
           setCash(true)}}
           className={cash==true ? `payment-method payment-active`:`payment-method`}>
           <img src={cashLogo} alt="Cash" className="payment-logo" />
-          <div>Cash</div>
+          <div>{l===`pl`?`Gotówką`:`Cash`}</div>
         </button>
         <button  onClick={(e)=>{
           setPayment();
@@ -87,7 +93,7 @@ const Payment = () => {
           setCash(false)}} 
           className={cash==false ? `payment-method payment-active`:`payment-method`}>
           <img src={cardLogo} alt="Card" className="payment-logo" />
-          <div>Card</div>
+          <div>{l===`pl`?`Kartą`:`Card`}</div>
         </button>
       </div>
       <div className="order-info">
@@ -99,10 +105,10 @@ const Payment = () => {
             onChange={handleAgreementChange}
           />
           <label htmlFor="agreement-checkbox">
-            By placing an order, I agree with Regulations and Privacy Policy
+            {l===`pl`?`Składając zamówienie zgadzam się z Regulaminem i Polityką Prywatności`:`By placing an order, I agree with Regulations and Privacy Policy`}
           </label>
         </div>
-        <button className="order-button" onClick={handleOrderComplete}>Complete the order</button>
+        <button className="order-button" onClick={handleOrderComplete}>{l===`pl`?`Zamawiam`:`Complete the order`}</button>
       </div>
     </div>
       <div className='left-payment-container'>
