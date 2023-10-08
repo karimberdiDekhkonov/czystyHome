@@ -27,7 +27,7 @@ const CleaningCalculator = () => {
 
   useEffect(() => {
     // Send a PUT request when the component is mounted
-    axios.put('https://9e51-188-146-122-228.ngrok-free.app/counter/visit')
+    axios.put('http://ec2-18-208-174-239.compute-1.amazonaws.com:8080/counter/visit')
       .then(response => {
         // Handle the response if needed
       })
