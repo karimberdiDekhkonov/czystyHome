@@ -44,7 +44,7 @@ const Payment = () => {
       };
       console.log(tripData)
       try {
-        const response = await axios.post("http://localhost:8080/add", tripData);
+        const response = await axios.post("https://auspicious-color-production.up.railway.app/add", tripData);
         if(response.data===true){
           navigate("/success")
         }else{
