@@ -40,11 +40,11 @@ const Payment = () => {
         apartmentNumber: localStorage.getItem("appNumber"),
         tripDateTime: localStorage.getItem("selectedDay") + "T"+localStorage.getItem("selectedTime")+":00+02:00",
         paymentType: localStorage.getItem("type"),
-        lng: l
+        lng: l==null?"en":l
       };
       console.log(tripData)
       try {
-        const response = await axios.post("https://auspicious-color-production.up.railway.app/add", tripData);
+        const response = await axios.post("http://localhost:8080/add", tripData);
         if(response.data===true){
           navigate("/success")
         }else{

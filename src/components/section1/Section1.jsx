@@ -71,7 +71,8 @@ const CleaningCalculator = () => {
   localStorage.setItem("totalAmount", totalAmount)
   localStorage.setItem("cleaningData", " room: " + rooms+
   " bathroom: "+bathrooms+
-  " kitchen: " +kitchens)
+  " kitchen: " +kitchens+
+  " Office: " + officces)
   
 
   const ref = useRef(null);
