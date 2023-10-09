@@ -38,7 +38,7 @@ const Payment = () => {
         street: localStorage.getItem("street"),
         houseNumber: localStorage.getItem("houseNumber"),
         apartmentNumber: localStorage.getItem("appNumber"),
-        tripDateTime: localStorage.getItem("selectedDay") + "T"+localStorage.getItem("selectedTime")+":00+02:00",
+        tripDateTime: localStorage.getItem("selectedDay") + "T"+localStorage.getItem("selectedTime")+":00+04:00",
         paymentType: localStorage.getItem("type"),
         lng: l==null?"en":l
       };
