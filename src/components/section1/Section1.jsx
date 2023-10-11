@@ -19,10 +19,10 @@ const CleaningCalculator = () => {
   const [kitchens, setKitchens] = useState(1);
   const [totalAmount, setTotalAmount] = useState(76);
   const [officces, isOfficce] = useState(false);
-  const roomCost = 39; // cost per room
+  const roomCost = 34; // cost per room
   const bathroomCost = 45; // cost per bathroom
-  const kitchenCost = 59; // cost per bathroom
-  const office = 50;
+  const kitchenCost = 49; // cost per bathroom
+  const office = 40;
   const l  = localStorage.getItem("lng");
   const t = useTranslation();
 
@@ -150,7 +150,7 @@ const CleaningCalculator = () => {
             </div>
           </form>
           <button className="ss-calculate" ref={ref} onClick={handleClick}>{l===`pl`?`Kontynuować`:`Continue`}</button>
-          {<div className="ss-info">{l===`pl`?`Sprzątanie mieszkania z`:`Apartment cleaning with`} {rooms} {l===`pl`?`pokojem i`:`room and`} {bathrooms} {l===`pl`?`łazienką`:`bathroom`}, {kitchens} {l===`pl`?`kuchnią, korytarzem`:` kitchen, corridor`} <del>{totalAmount} PLN</del> <span className="text-danger ss-rooms">{totalAmount} PLN</span></div>}
+          {<div className="ss-info">{l===`pl`?`Sprzątanie mieszkania z`:`Apartment cleaning with`} {rooms} {l===`pl`?`pokojem i`:`room and`} {bathrooms} {l===`pl`?`łazienką`:`bathroom`}, {kitchens} {l===`pl`?`kuchnią, korytarzem`:` kitchen, corridor`} <del>{totalAmount} PLN</del> <span className="text-danger ss-rooms">{totalAmount*2} PLN</span></div>}
 
         </div>
         <CalendarComponent />
